@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Calculator</title>
+<link rel="stylesheet" href="./Bootstap File/bootstrap.css">
+<style>
+        *{
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        div{
+            background-color: pink;
+            color: black;
+        }
+        button{
+            cursor: pointer;
+        }
+</style>
+</head>
+<body>
+<div class="col-md-6">
+<label>Enter the First number :</label> 
+<input id="first"> <br>
+<label>Enter the Second number:</label> 
+<input id="second"> <br>
+<label>Enter the Third number:</label> 
+<input id="third"> <br>
+<button class="button btn-secondary" onclick="add()">Add</button>
+<button class="button btn-secondary" onclick="sub()">Sub</button>
+<button class="button btn-secondary" onclick="mul()">Mul</button>
+<button class="button btn-secondary" onclick="div()">Div</button> <br>
+<label>Result is:</label> 
+<input id="answer">
+</div>
+<script>
+    function add() {
+        var a, b, c;
+        a = Number(document.getElementById("first").value);
+        b = Number(document.getElementById("second").value);
+        d = Number(document.getElementById("third").value);
+        c = a + b + d;
+        document.getElementById("answer").value = c;
+    }
+    function sub() {
+        var a, b, c , d;
+        a = Number(document.getElementById("first").value);
+        b = Number(document.getElementById("second").value);
+        d = Number(document.getElementById("third").value);
+        c = a - b - d;
+        document.getElementById("answer").value = c;
+    }
+    function mul() {
+        var a, b, c ,d;
+        a = Number(document.getElementById("first").value);
+        b = Number(document.getElementById("second").value);
+        d = Number(document.getElementById("third").value);
+        c = (a * b) * d;
+        document.getElementById("answer").value = c;
+    }
+    
+    function div() {
+        var a, b, c, d;
+        a = Number(document.getElementById("first").value);
+        b = Number(document.getElementById("second").value);
+        d = Number(document.getElementById("third").value);
+        c = (a / b) / d;
+        document.getElementById("answer").value = c;
+    }
+</script>
+</body>
+</html>
